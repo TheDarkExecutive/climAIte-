@@ -1,0 +1,5 @@
+{
+  "name": "Prompt Control Panel",
+  "description": "A high-fidelity management interface for prompt optimization settings, featuring constraints, toggles, selectors, and rule management.",
+  "requestFramePermissions": []
+}
