@@ -483,7 +483,7 @@ const App: React.FC = () => {
 const DocCard: React.FC<{ icon: React.ReactNode; title: string; desc: string }> = ({ icon, title, desc }) => (
   <div className="p-10 bg-white border border-gray-100 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
     <div className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center mb-6 shadow-inner">
-      {React.cloneElement(icon as React.ReactElement, { size: 28 })}
+      {React.isValidElement(icon) ? React.cloneElement(icon as React.ReactElement<any>, { size: 28 }) : icon}
     </div>
     <h3 className="text-xl font-black text-gray-900 mb-3">{title}</h3>
     <p className="text-gray-500 leading-relaxed font-medium">{desc}</p>
